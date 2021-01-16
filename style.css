@@ -33,7 +33,7 @@ nav{
 .nav-links a{
     color: pink;
     text-decoration: none;
-    letter-spacing: 3px;
+    letter-spacing: 2px;
     font-weight: bold;
     font-size: 14px;
 }
@@ -49,6 +49,30 @@ nav{
     background-color: white;
     margin: 5px;
     transition: all 0.3s ease;
+}
+nav ul button{
+    float: right;
+    height: 25px;
+    width: 25px;
+    background: 0;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background-color: rgb(252, 252, 252);
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+}
+nav ul input{
+    background: 0;
+    border: none;
+    outline: none;
+    width: 150px;
+    border: 0;
+    height: 25px;
+    font-size: 20px;
+    background-color: rgb(252, 252, 252);
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
 }
 
 @media screen and (max-width:768px){
