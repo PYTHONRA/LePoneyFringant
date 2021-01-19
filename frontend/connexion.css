@@ -29,7 +29,7 @@ html body{
 }
 .form h1{
 	font-size: 2.2rem;
-	margin: 40px;
+	margin: 20px;
 }
 
 /* les input box*/
@@ -40,11 +40,11 @@ html body{
 	border: none;
 	border-radius: 20px;
 }
-#submit{
+.submit{
 	padding: 12px;
 	border-radius: 20px;
 	width: 50%;
-	margin: 40px;
+	margin: 10px;
 	font-size: 1rem;
 	font-weight: bolder;
 	border: none;
