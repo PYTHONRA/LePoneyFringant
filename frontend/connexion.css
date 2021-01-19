@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0px;
+	box-sizing: border-box;
+	font-family: 'Barlow Condensed', sans-serif;
+}
+html body{
+	background: var(--color-space-ocean);
+	
+}
+.form{
+	display: flex;
+	flex-direction: column;
+	width: 400px;
+	height: 520px;
+	background-color: var(--color-space-princesse);
+	align-items: center;
+	border-radius: 10px;
+	margin: auto;
+	margin-top: 100px;
+}
+
+.form img{
+	height: 75px;
+	width: 75px;
+	margin-top:-35px;
+}
+.form h1{
+	font-size: 2.2rem;
+	margin: 40px;
+}
+
+/* les input box*/
+.box{
+	padding: 12px;
+	margin: 15px;
+	width: 65%;
+	border: none;
+	border-radius: 20px;
+}
+#submit{
+	padding: 12px;
+	border-radius: 20px;
+	width: 50%;
+	margin: 40px;
+	font-size: 1rem;
+	font-weight: bolder;
+	border: none;
+	outline: none;
+	background: linear-gradient(45deg, #87adfe,#ff77CD);
+	color: #ffff;
+}
+#submit:hover{
+	cursor: pointer;
+	color: var(--color-space-cadet);
+}
+/* le mot de passe zappé*/
+.form a{
+	text-decoration: none;
+	color: var(--color-space-cadet);
+	font-weight: bolder;
+}
+
+.form a:hover{
+	color: var(--color-space-cadet);
+}
