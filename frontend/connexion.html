@@ -4,24 +4,56 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
 	<link rel="stylesheet" href="connexion.css">
 	<link rel="stylesheet" href="variables.css">
-	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+		integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
 	<title>Connexion</title>
 </head>
+
 <body>
-	<form action="" class="form">
-		<img src="/assets/undraw_profile_pic_ic5t.svg" alt="avatar">
+	<nav>
+        <div class="Logo">
+            <h4>Le Poney Fringant</h4>
+        </div>
+        <ul class="nav-links">
+            <li>
+                <a href="index.html">Accueil</a>
+            </li>
+            <li>
+                <a href="#"> Statistique</a>
+            </li>
+            <li>
+                <a href="#">Role Membre</a>
+            </li>
+            <li>
+                <a href="connexion.html">Connexion</a>
+            </li>
+            <li>
+                <input type="text" placeholder="" name="search" .line>
+                <button class="fa fa-search" aria-hidden="true"></button>
+            </li>
+            </ul>
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </nav>
+	<form action="inscription.html" class="form" method="POST">
+		<img src="/assets/lePoney.svg" alt="avatar">
 		<h1>Connexion</h1>
 		<input type="text" name="pseudo" class="box" placeholder="Numéro Adhérent">
 		<input type="email" name="email" class="box" placeholder="Adresse Mail">
 		<input type="password" name="password" class="box" placeholder="Mot de passe">
-		<input type="button" class="submit" value="Connexion">
+		<button name="button" class="submit">Connexion</button>
 		<a href="#">Mot de passe oublié?</a>
-		<input type="button" class="submit" value="Créer un compte">
+		<button name="button" class="submit">Créer un compte</button>
 	</form>
-	<script src="/frontend/app.js"></script>
+	<script src="app.js"></script>
 </body>
+
 </html>
 </body>
 
