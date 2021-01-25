@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="variables.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="inscription.css">
-	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
-		integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <title>Inscription</title>
+    
 </head>
+
 <body>
     <nav>
         <div class="Logo">
@@ -32,29 +35,36 @@
                 <input type="text" placeholder="" name="search" .line>
                 <button class="fa fa-search" aria-hidden="true"></button>
             </li>
-            </ul>
+        </ul>
         <div class="burger">
             <div class="line1"></div>
             <div class="line2"></div>
             <div class="line3"></div>
         </div>
     </nav>
-    <form action="" class="form" method="POST">
-		<img src="/assets/lePoney.svg" alt="avatar">
-        <h1>Inscription</h1>
-        <input type="text" name="name" class="boxe" placeholder="Prénom">
-        <input type="text" name="name" class="boxe" placeholder="Nom">
-        <input type="date" name="date" class="boxe" placeholder="Date de naissance">
-        <input type="text" name="pseudo" class="boxe" placeholder="Numéro Adhérent">
-		<input type="email" name="email" class="boxe" placeholder="Adresse Mail">
-        <input type="password" name="password" class="boxe" placeholder="Mot de passe">
-        <input type="password" name="password" class="boxe" placeholder="Confirmez le Mot de passe">
-        <input type="text" name="cp" class="boxe" placeholder="Code Postal">
-        <input type="text" name="address" class="boxe" placeholder="Adresse">
-        <input type="text" name="address" class="boxe" placeholder="Ville">
-        <input type="tel" name="phone" class="boxe" placeholder="Numéro de téléphone">
-		<button name="button" class="submit1">Créer un compte</button>
-    </form>
-    <script src="app.js"></script>
+        <form action="" class="form" method="POST">
+            <img src="/assets/lePoney.svg" alt="avatar">
+            <h1>Inscription</h1>
+            <div class="contact-form">
+                <div class="inputs">
+                    <input type="text" name="name" class="boxe" placeholder="Prénom">
+                    <input type="text" name="name" class="boxe" placeholder="Nom">
+                    <input type="date" name="date" class="boxe" placeholder="Date de naissance">
+                    <input type="text" name="pseudo" class="boxe" placeholder="Numéro Adhérent">
+                    <input type="email" name="email" class="boxe" placeholder="Adresse Mail">
+                    <input type="password" name="password" class="boxe" placeholder="Mot de passe">
+                </div>
+                <div class="input2">
+                    <input type="password" name="password" class="boxe" placeholder="Confirmez le Mot de passe">
+                    <input type="text" name="cp" class="boxe" placeholder="Code Postal">
+                    <input type="text" name="address" class="boxe" placeholder="Adresse">
+                    <input type="text" name="address" class="boxe" placeholder="Ville">
+                    <input type="tel" name="phone" class="boxe" placeholder="Numéro de téléphone">
+                    <button name="button" class="submit1">Créer un compte</button>
+                </div>
+            </div>
+        </form>
+        <script src="app.js"></script>
 </body>
+
 </html>
