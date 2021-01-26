@@ -12,18 +12,18 @@ CREATE TABLE `interetAdherent` (
 )ENGINE=InnoDB; 
 
 
-CREATE TABLE `adherents` (
+CREATE TABLE `adherents`(
   `adherent_id` int NOT NULL AUTO_INCREMENT,
   `prenom` varchar(30) NOT NULL,
   `nom` varchar(30) NOT NULL,
-  `pseudo` varchar(50) NOT NULL,
+  `pseudo` varchar(255) NOT NULL,
   `email` varchar(50) NOT NULL,
   `numero` int(100) NOT NULL,
   `adresse` varchar(200) NOT NULL,
   `code_postal` int(10) NOT NULL,
   `ville` varchar(100) NOT NULL,
   `numero_adhesion` varchar(100) NOT NULL,
-  `password` varchar(30) NOT NULL,
+  `password` varchar(255) NOT NULL,
   `date_adhesion` DATE DEFAULT (curdate()),
   PRIMARY KEY (`adherent_id`),
   UNIQUE KEY `pseudo` (`pseudo`),
@@ -49,4 +49,5 @@ INSERT INTO Interets(nom) VALUES ('sport'),('musique'),('jeux vidéos'),('lectur
 ('joaillerie'),('agriculture'),('cinéma'),('politique'),('couture'),('animaux'),('science'),('histoire'),('svt'),('physique-chimie'),('taxidermie'),('philatélie');
 
 
+INSERT INTO adherents(prenom, nom, pseudo, email, numero, adresse, code_postal, ville, numero_adhesion, password) VALUES('eve', 'jourdan' ,'evejourdan', 'jourdan@blonde.fr', '0612345667', '15 rue de la eve', '13127', 'licorne', 'adh-2045-','$2y$10$O0NcIevZxKjAoa2QwDfeLeaTd3Oxzmrbwa.db5DL8AWa4AEm3xx6G'); -- password
 

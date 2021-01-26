@@ -80,5 +80,18 @@ html body{
 	cursor: pointer;
 	color: var(--color-space-cadet);
 }
+@media screen and (max-width: 765px){
+	.contact-form{
+	  flex-direction: column;
+	}
+	.inputs,
+	.input2{
+	  width: 100%;
+	  margin:0;
+	}
+  }
 
-
+.interet label{
+	padding: 12px;
+    margin: 15px;
+}
