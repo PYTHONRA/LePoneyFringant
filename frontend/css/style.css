@@ -137,10 +137,7 @@ nav ul input{
         display: block;
     }
     .poney-icon{
-        position: absolute;
-        left: 9%;
-        top: 60%;
-        z-index: -1;
+        display: none;
     }
 
 }
