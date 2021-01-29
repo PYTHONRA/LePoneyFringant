@@ -43,7 +43,7 @@ html body{
 	border: none;
 	border-radius: 20px;
 }
-.submit{
+#submit{
 	padding: 12px;
 	border-radius: 20px;
 	width: 50%;

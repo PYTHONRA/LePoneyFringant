@@ -19,3 +19,30 @@ const navSlide = () => {
     
 }
 navSlide();
+
+/* On va empecher l'événement de soumission de se propager (event.preventDefault()) */
+// D'où part l'évenement ? Du bouton, et remonte jusqu'au formulaire 
+const btn = document.getElementById('btn_login');
+btn.addEventListener('click', (ev) => {
+    ev.preventDefault(); // pour empêche l'évenement de se propage
+    submitForm(); 
+    
+})
+
+// TODO : rajouter les données du formulaire 
+function submitForm(){
+    let formParams = new URLSearchParams();  
+    formParams.append('pseudo', 'evejourdan');
+    formParams.append('email','jourdan@blonde.fr');
+    formParams.append('password', 'password');
+    let headers = new Headers();
+    headers.append('Accept' ,'application/json');
+    const requestOptions = {
+        method:'POST', 
+        body:formParams, 
+        headers: headers
+    }; 
+    fetch('/backend/connexion.php', requestOptions) // Ici il faudrait envoyer les champs de formulaire au serveur
+    .then(response => response.text()) //  POur cela il faudrait indiquer au serveur que je veux du JSON 
+    .then(data => console.log(data))
+}

@@ -50,4 +50,4 @@ INSERT INTO Interets(nom) VALUES ('sport'),('musique'),('jeux vidéos'),('lectur
 
 
 INSERT INTO adherents(prenom, nom, pseudo, email, numero, adresse, code_postal, ville, numero_adhesion, password) VALUES('eve', 'jourdan' ,'evejourdan', 'jourdan@blonde.fr', '0612345667', '15 rue de la eve', '13127', 'licorne', 'adh-2045-','$2y$10$O0NcIevZxKjAoa2QwDfeLeaTd3Oxzmrbwa.db5DL8AWa4AEm3xx6G'); -- password
-
+INSERT INTO Profils(titre, photo, description, adherent_id) VALUES ('', '', '', '');

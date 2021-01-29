@@ -4,9 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="/frontend/css/style.css">
-	<link rel="stylesheet" href="/frontend/css/variables.css">
+    <link rel="stylesheet" href="/frontend/css/variables.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <title>Le Poney Fringant</title>
 </head>
 
@@ -39,9 +40,9 @@
             <div class="line3"></div>
         </div>
     </nav>
-    <script src="app.js"></script>
+    <script src="/frontend/app.js" defer></script>
     <div class="content">
-        <button class="sign">S'inscrire !</button>
+        <button class="sign"><a href="/frontend/inscription.html">S'inscrire !</a></button>
         <h1>Le Poney Fringant !</h1>
         <p>Lorem ipsum dolor sit amet consectetur!</p>
     </div>
@@ -49,55 +50,61 @@
 
     <div id="block">
         <h1 class="head"><span>Role</span>Membre</h1>
-    
+
         <div class="profiles">
-          <div class="profile">
-            <img src="/assets/undraw_female_avatar_w3jk.svg" class="profile-img">
-    
-            <h3 class="user">Anissa</h3>
-            <h5>Créative</h5>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum eveniet soluta hic sunt sit reprehenderit.</p>
-          </div>
-          <div class="profile">
-            <img src="/assets/undraw_female_avatar_w3jk.svg" class="profile-img">
-    
-            <h3 class="user">Yamina</h3>
-            <h5>Directrice</h5>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam facilis sint quod.</p>
-          </div>
-          <div class="profile">
-            <img src="/assets/undraw_female_avatar_w3jk.svg" class="profile-img">
-            <h3 class="user">Eve</h3>
-            <h5>Manager</h5>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, eveniet!</p>
-          </div>
+            <div class="profile">
+                <img src="/assets/undraw_female_avatar_w3jk.svg" class="profile-img">
+
+                <h3 class="user">Anissa</h3>
+                <h5>Créative</h5>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum eveniet soluta hic sunt sit
+                    reprehenderit.</p>
+            </div>
+            <div class="profile">
+                <img src="/assets/undraw_female_avatar_w3jk.svg" class="profile-img">
+
+                <h3 class="user">Yamina</h3>
+                <h5>Directrice</h5>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam facilis sint quod.</p>
+            </div>
+            <div class="profile">
+                <img src="/assets/undraw_female_avatar_w3jk.svg" class="profile-img">
+                <h3 class="user">Eve</h3>
+                <h5>Manager</h5>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, eveniet!</p>
+            </div>
         </div>
-      </div>
-      <div id="block">
+    </div>
+    <div id="block">
         <div class="profiles">
-          <div class="profile">
-            <img src="/assets/undraw_female_avatar_w3jk.svg" class="profile-img">
-    
-            <h3 class="user">Cordelia</h3>
-            <h5>Créative</h5>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum eveniet soluta hic sunt sit reprehenderit.</p>
-          </div>
-          <div class="profile">
-            <img src="/assets/undraw_female_avatar_w3jk.svg" class="profile-img">
-    
-            <h3 class="user">Nino</h3>
-            <h5>Directrice</h5>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam facilis sint quod.</p>
-          </div>
-          <div class="profile">
-            <img src="/assets/undraw_female_avatar_w3jk.svg" class="profile-img">
-            <h3 class="user">Muriel</h3>
-            <h5>Manager</h5>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, eveniet!</p>
-          </div>
+            <div class="profile">
+                <img src="/assets/undraw_female_avatar_w3jk.svg" class="profile-img">
+
+                <h3 class="user">Cordelia</h3>
+                <h5>Créative</h5>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum eveniet soluta hic sunt sit
+                    reprehenderit.</p>
+            </div>
+            <div class="profile">
+                <img src="/assets/undraw_female_avatar_w3jk.svg" class="profile-img">
+
+                <h3 class="user">Nino</h3>
+                <h5>Directrice</h5>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam facilis sint quod.</p>
+            </div>
+            <div class="profile">
+                <img src="/assets/undraw_female_avatar_w3jk.svg" class="profile-img">
+                <h3 class="user">Muriel</h3>
+                <h5>Manager</h5>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, eveniet!</p>
+            </div>
         </div>
-      </div>
-      <footer class="footer">
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
+    <div style="width: 75%">
+        <canvas id="myChart"></canvas>
+    </div>
+    <footer class="footer">
         <ul>
             <li><a href="#">Accueil</a></li>
             <li><a href="#">Role Membre</a></li>
