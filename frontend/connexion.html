@@ -2,18 +2,18 @@
 <html lang="fr">
 
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="/frontend/css/style.css">
-	<link rel="stylesheet" href="/frontend/css/connexion.css">
-	<link rel="stylesheet" href="/frontend/css/variables.css">
-	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
-		integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
-	<title>Connexion</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/frontend/css/style.css">
+    <link rel="stylesheet" href="/frontend/css/connexion.css">
+    <link rel="stylesheet" href="/frontend/css/variables.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <title>Connexion</title>
 </head>
 
 <body>
-	<nav>
+    <nav>
         <div class="Logo">
             <h4>Le Poney Fringant</h4>
         </div>
@@ -22,10 +22,10 @@
                 <a href="index.html">Accueil</a>
             </li>
             <li>
-                <a href="#"> Statistique</a>
+                <a href="statistique.html"> Statistique</a>
             </li>
             <li>
-                <a href="#">Role Membre</a>
+                <a href="/frontend/index.html/#block">Role Membre</a>
             </li>
             <li>
                 <a href="connexion.html">Connexion</a>
@@ -34,29 +34,29 @@
                 <input type="text" placeholder="" name="search" .line>
                 <button class="fa fa-search" aria-hidden="true"></button>
             </li>
-            </ul>
+        </ul>
         <div class="burger">
             <div class="line1"></div>
             <div class="line2"></div>
             <div class="line3"></div>
         </div>
     </nav>
-	<form action="/backend/connexion.php" class="form" method="POST">
-		<img src="/assets/lePoney.svg" alt="avatar">
-		<h1>Connexion</h1>
-		<input type="text" name="pseudo" class="box" placeholder="Pseudo">
-		<input type="email" name="email" class="box" placeholder="Adresse Mail">
-		<input type="password" name="password" id="password" class="box" placeholder="Mot de passe">
-		<button type="submit" id="btn_login">Connexion</button>
-		<a href="#">Mot de passe oublié?</a>
-	</form>
+    <form action="/backend/connexion.php" class="form" method="POST">
+        <img src="/assets/lePoney.svg" alt="avatar">
+        <h1>Connexion</h1>
+        <input type="text" name="pseudo" class="box" placeholder="Pseudo">
+        <input type="email" name="email" class="box" placeholder="Adresse Mail">
+        <input type="password" name="password" id="password" class="box" placeholder="Mot de passe">
+        <button type="submit" id="btn_login">Connexion</button>
+        <a href="#">Mot de passe oublié?</a>
+    </form>
     <script src="/frontend/app.js" defer></script>
     <footer class="footer">
         <ul>
-            <li><a href="#">Accueil</a></li>
-            <li><a href="#">Role Membre</a></li>
-            <li><a href="#">Statistique</a></li>
-            <li><a href="#">connexion</a></li>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="/frontend/index.html/#block">Role Membre</a></li>
+            <li><a href="statistique.html">Statistique</a></li>
+            <li><a href="connexion.html">connexion</a></li>
             <li><a href="#">Contact</a></li>
         </ul>
         <p> © Copyright Poney Fringant 2021.</p>

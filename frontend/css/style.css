@@ -1,27 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100&display=swap');
-
+/* on importe le google font et * met en place la page */
 *{
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
     font-family: 'Barlow Condensed', sans-serif;
 }
+/* on met en place le background color de la page */
 html body{
     background: var(--color-space-ocean);
 }
+/** on commence par la navbar burger **/
 nav{
     display: flex;
     justify-content: space-around;
     align-items: center;
     min-height: 8vh;
 }
-
+/* le logo c'est le titre "poney fringant de la navbar*/
 .Logo{
     text-transform: uppercase;
     letter-spacing: 5px;
     font-size: 20px;
 }
-
+/* les liens de la navar "acceuil" ect..*/
 .nav-links{
     display: flex;
     justify-content: space-around;
@@ -37,7 +39,7 @@ nav{
     font-size: 14px;
     color: black;
 }
-
+/* on commence à faire le burger*/
 .burger{
     display: none;
     cursor: pointer;
@@ -50,6 +52,7 @@ nav{
     margin: 5px;
     transition: all 0.3s ease;
 }
+/* mise en place de la navbar ou mettre chaque élements*/
 nav ul button{
     float: right;
     height: 25px;
@@ -88,7 +91,8 @@ nav ul input{
     margin-left: 10%;
     margin-top: 10%;
 }
-.content .sign{
+/* le button l's'inscrire*/
+.content .sign a{
     display: inline-block;
     border-radius: 6px;
     padding: 10px 20px;
@@ -100,9 +104,11 @@ nav ul input{
     font-weight: bold;
     background: linear-gradient(45deg, #87adfe,#ff77CD);
 }
+/* la petite description juste en dessous du button s'inscrire*/
 .content p{
     font-size: 20px;
 }
+/* le poney à coté du button et la description*/
 .poney-icon{
     height: 70%;
     position: absolute;
@@ -110,9 +116,11 @@ nav ul input{
     left: 55%;
     transition: transform 0.5s;
 }
+/* petite animation pour bouger l'image du poney */
 .poney-icon:hover{
     transform: translate(-10px);
 }
+/** le responsive pour le menu burger **/
 @media screen and (max-width:768px){
     body{
         overflow-x: hidden;
@@ -141,16 +149,17 @@ nav ul input{
     }
 
 }
-
+/* responsive pour un grand écran en cours*/
 @media screen and (max-width:1024px){
     .nav-links{
         width: 60%;
     }
 }
+/* animation quand on clique sur le menu hamburger*/
 .nav-active{
     transform: translateX(0%);
 }
-
+/** animation pour les Links **/
 @keyframes navLinkFade{
     from{
         opacity: 0;
@@ -161,6 +170,7 @@ nav ul input{
         transform: translateX(0px);
     }
 }
+/* mise en place des ligne pour créer la forme hamburger*/
 .toggle .line1{
     transform: rotate(-45deg) translate(-5px,6px);
 }
@@ -171,11 +181,13 @@ nav ul input{
 .toggle .line3{
     transform: rotate(45deg) translate(-5px,-6px);
 }
+/* on commence par la page role membre*/
 #block{
     margin: 20px 40px;
     position: relative;
-    top: calc(100px + 50vh);
+    top: calc(100px + 40vh);
 }
+/* le head est le titre "role membre"*/
 .head{
     font-size: 40px;
     color: var(--color-space-princesse);
@@ -183,15 +195,16 @@ nav ul input{
 .head span{
     font-size: 30px;
 }
+/* la div qui regroupe tous les profiles toujours en flex*/
 .profiles{
     display: flex;
     justify-content: space-around;
     margin: 20px 80px;
 }
-
 .profile{
     flex-basis: 260px;
 }
+/* images de chaque profile du role membre*/
 .profile .profile-img{
     height: 200px;
     width: 200px;
@@ -199,9 +212,11 @@ nav ul input{
     cursor: pointer;
     transition: 400ms;
 } 
+ /**pour jouer avec les couleurs des photos **/
 .profile:hover .profile-img{
     filter: grayscale(0);
 }
+/* les utilisateurs du profile donc les prénoms*/
 .user{
     margin-top: 30px;
     font-size: 35px;
@@ -209,18 +224,20 @@ nav ul input{
     color: var(--color-space-princesse);
     font-weight: bold;
 }
+/* roles des utilisateurs*/
 .profile h5 {
     font-size: 18px;
     font-weight: 100;
     letter-spacing: 3px;
     font-weight: bold;
 }
-
+/* petite description de chaque profiles*/
 .profile p{
     font-size: 16px;
     margin-top: 20px;
     text-align: justify;
 }
+/* responsive fini pour la page role membre en grand écran*/
 @media screen and (max-width: 1024px) {
     .profiles {
       flex-direction: column;
@@ -239,10 +256,9 @@ nav ul input{
     }
     .block{
         position: relative;
-        top: calc(100px + 98vh);
     }
   }
-  
+/* cette fois en petit écran */
   @media screen and (max-width: 900px) {
     .heading {
       font-size: 40px;
@@ -261,27 +277,29 @@ nav ul input{
       margin: 20px 10px 80px 10px;
     }
   }
+/* petite phrase du footer*/
   footer p{
     padding:0;
     font-size: 0.8em;
     margin: 1em 0;
     font-size: 1rem;
 }
+
 footer ul{
     list-style: none;
     display: flex;
     margin: 1em 0; 
 }
+/* footer pour les a liste et ul*/
 footer ul li a{
     padding: 1em; 
     text-decoration: none;
     color: rgb(0, 0, 0);
-    transition: 100ms;
 }
-
+/* mise en place du footer */
 footer{
     position: relative;
-    top: calc(100px + 98vh);
+    top: calc(100px + 70vh);
     width: 100%;
     background: var(--color-space-princesse);
     color:var(--color-space-cadet); 

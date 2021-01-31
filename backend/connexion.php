@@ -52,8 +52,9 @@
         header('Content-Type: text/html');
         if($ok) {
         echo "vous etes connecté !"; 
+        //session_start();
+        //header('location: /frontend/profil.html');
     } else {
          echo "incorrect";
     }
     }
-    

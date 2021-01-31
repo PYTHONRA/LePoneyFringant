@@ -10,6 +10,7 @@ html body{
 	background: var(--color-space-ocean);
 	
 }
+/* formulaire en flex*/
 .form{
 	display: flex;
 	flex-direction: column;
@@ -21,12 +22,13 @@ html body{
 	margin: auto;
 	margin-top: 100px;
 }
-
+/* on s'occupe de l'image poney au dessus du formulaire*/
 .form img{
 	height: 75px;
 	width: 75px;
 	margin-top:-35px;
 }
+/* puis du titre "connexion*/
 .form h1{
 	font-size: 2.2rem;
 	margin: 20px;
@@ -43,7 +45,8 @@ html body{
 	border: none;
 	border-radius: 20px;
 }
-#submit{
+/*on s'occupe du button se connexion*/
+#btn_login{
 	padding: 12px;
 	border-radius: 20px;
 	width: 50%;
@@ -52,19 +55,20 @@ html body{
 	font-weight: bolder;
 	border: none;
 	background: linear-gradient(45deg, #87adfe,#ff77CD);
-	color: #ffff;
+	color:var(--color-space-cadet);
 }
+/*petit hoover très léger du btn_login*/
 #submit:hover{
 	cursor: pointer;
 	color: var(--color-space-cadet);
 }
-/* le mot de passe zappé*/
+/* puis on s'occupe de la petite phrase du mdp*/
 .form a{
 	text-decoration: none;
 	color: var(--color-space-cadet);
 	font-weight: bolder;
 }
-
+/* petit hover pour la phrase mdp*/
 .form a:hover{
 	color: var(--color-space-cadet);
 }

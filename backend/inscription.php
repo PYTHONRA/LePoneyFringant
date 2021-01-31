@@ -8,8 +8,8 @@ $email = $_POST['email'];
 $password = $_POST['password'];
 $confirmation = $_POST['password-confirmation'];
 $cp = $_POST['cp'];
-$adresse = $_POST['address'];
-$ville = $_POST['adress'];
+$adresse = $_POST['addresse'];
+$ville = $_POST['ville'];
 $numero = $_POST['phone'];
 
 if(!filter_var($email, FILTER_VALIDATE_EMAIL)) {
@@ -29,7 +29,10 @@ if( $password != $confirmation) {
     echo "Les mots de passes sont différents"; 
     exit; 
 }
-
+if(!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+    echo "Le format de l'adresse est incorrect"; 
+    exit; 
+}
 // Arrivé ici, c'est que pour l'instant tout va bien (normalement)
 try {
     // = sql, donc pareil qu'en dessous
@@ -43,7 +46,7 @@ try {
     // TODO : on vérifie que l'utlisateur (son pseudo où son email) n'existe pas déjà
 
     // On écrit la requête de recherche de l'utliisateur 
-    $rqt = "SELECT * FROM utilisateurs WHERE pseudo=:pseudo OR email=:email";
+    $rqt = "SELECT * FROM adherents WHERE pseudo=:pseudo OR email=:email";
     // on prépare la requête
     $requetePreparee = $connexion->prepare($rqt);
     // on associe les valeurs (du formulaire) aux paramètres de notre requête préparée (ceux qui commencent pas `:` dans notre requête)
@@ -51,7 +54,6 @@ try {
     $requetePreparee->bindParam(':email', $email);
     // on execute la requête
     $requetePreparee->execute();
-  
     // Si on a un résultat (ou plus), ça veut dire que le pseudo ou l'email est déjà pris
     if($requetePreparee->fetch() != false) {
         // TODO : message d'erreur mail ou pseudo déjà pris, 
@@ -65,14 +67,19 @@ try {
     $hash = password_hash($password, PASSWORD_DEFAULT); 
 
     // on écrit la requête d'insertion
-    $rqt = "INSERT INTO adherents(prenom, nom, pseudo, email, numero, adresse, code_postal, ville, numero_adhesion, password) VALUES('eve', 'jourdan' ,'evejourdan', 'jourdan@blonde.fr', '0612345667', '15 rue de la eve', '13127', 'licorne', 'adh-2045-','$2y$10$O0NcIevZxKjAoa2QwDfeLeaTd3Oxzmrbwa.db5DL8AWa4AEm3xx6G'); -- password";
+    $rqt = "INSERT INTO adherents(prenom, nom, pseudo, email, numero, adresse, code_postal, ville, numero_adhesion, password) VALUES(:prenom, :nom, :pseudo, :email, :numero, :adresse, :code_postal, :ville, :numero_adhesion); -- password";
     // on prépare la requête
     $requetePreparee = $connexion->prepare($rqt);
     // on associe les valeurs (du formulaire) aux paramètres de notre requête préparée (ceux qui commencent pas `:` dans notre requête)
+    $requetePreparee->bindParam(':name', $prenom);
+    $requetePreparee->bindParam('name', $nom);
     $requetePreparee->bindParam(':pseudo', $pseudo);
     $requetePreparee->bindParam(':email', $email);
+    $requetePreparee->bindParam(':adresse', $adresse);
+    $requetePreparee->bindParam(':code_postal', $code_postal);
+    $requetePreparee->bindParam(':ville', $ville);
+    $requetePreparee->bindParam(':phone', $numero);
     $requetePreparee->bindParam(':password', $hash);
-
     // on execute la requête
     $requetePreparee->execute();
     // on vérifie le nombre de ligne insérée (1 normalement)
@@ -86,8 +93,12 @@ try {
         // TODO : Quitte ? redirige ? je ne sais pas ce qu'on fait...
         echo "Hey $pseudo, tu es maintenant enregistré";
     }
+    header('Location: ../frontend/interet.html');
+    exit();
 
 } catch(Exception $e) { // Si on "attrape" exception, c'est qu'il y a eu un problème 
     // On affiche le message d'erreur et on quitte
     echo $e->getMessage(); //:waring: :attention: :achtung: On ne fait pas un sur du code en production !!!!!
 }
+
+//inscription pas terminé
